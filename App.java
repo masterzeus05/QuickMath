@@ -1,4 +1,4 @@
-import Games.QuickMath;
+import Games.*;
 import javax.swing.*;
 import java.awt.event.*;  
 
@@ -7,7 +7,7 @@ public class App extends JFrame implements ActionListener{
 	JButton bEnter, bExit;
 	JLabel lChallenge, lStatus;
 	JTextField tResponse;
-	QuickMath game;
+	Game game;
 
 	private App(){
 		super("Quick Math");  
@@ -49,7 +49,7 @@ public class App extends JFrame implements ActionListener{
 		if (e.getSource()==bExit) System.exit(0);
 		else if (e.getSource()==bEnter || (e.getSource()==tResponse)){
 			String text = tResponse.getText();
-			if (text.equals("") || !text.matches("-?\\d+(\\.\\d+)?")){
+			if (text.equals("") || !text.matches("-?\\d+(\\.\\d+)?") || text.length()>6){
 				tResponse.setText("");
 				return;
 			}

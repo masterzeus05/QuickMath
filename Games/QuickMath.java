@@ -2,7 +2,7 @@ package Games;
 import java.util.List;
 import java.util.Arrays;
 
-public class QuickMath{
+public class QuickMath implements Game{
     int _score = 0;
     int _games = 10;
     String _currentChallenge;
